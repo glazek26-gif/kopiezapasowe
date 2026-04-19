@@ -72,6 +72,16 @@ channel = beta
 repo = mainsail-crew/mainsail
 path = /usr/data/mainsail
 
+[update_manager mobileraker]
+type = git_repo
+path = /usr/data/mobileraker_companion
+origin = https://github.com/Clon1998/mobileraker_companion.git
+virtualenv = /usr/data/mobileraker-env
+primary_branch = main
+requirements = scripts/mobileraker-requirements.txt
+install_script = scripts/install.sh
+managed_services = mobileraker
+
 [update_manager octoeverywhere]
 type = git_repo
 channel = beta
@@ -85,7 +95,7 @@ managed_services =
 
 [announcements]
 subscriptions = 
-	octoeverywhere
+	octoapp.
 
 [update_manager ]
 type = git_repo
@@ -95,4 +105,16 @@ env = /usr/data/moonraker-obico/scripts/../../moonraker-obico-env/bin/python
 requirements = requirements.txt
 install_script = install.sh
 managed_services = 
+
+[update_manager octoapp]
+type = git_repo
+channel = beta
+primary_branch = release
+path = /usr/data/octoapp
+origin = https://github.com/crysxd/OctoApp-Plugin.git
+env = /usr/data/octoapp-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoapp
 

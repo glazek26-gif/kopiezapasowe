@@ -91,3 +91,5 @@ requirements = requirements.txt
 install_script = install.sh
 managed_services = 
 
+[simplyprint]
+
